@@ -12,7 +12,13 @@ body{
     box-sizing: border-box; /*Por defecto, css usa border-content que ignora el 
     padding y el border para el tamaño exacta del div}*/ 
 }
+
+.hide{
+    display: none;
+}
+
 /*Primera pantalla*/
+
 .custom-box{
     background-color: #356BF6;
     max-width: 700px;
@@ -56,7 +62,7 @@ body{
     padding-bottom: 10px;
     font-style: italic;
 }
-.question-test{
+.question-text{
     font-size: 22px;
     padding: 10px 10px;
 }
