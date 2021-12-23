@@ -72,7 +72,22 @@ body{
     padding: 25px;
     border-radius: 15px;
     cursor: pointer;
+    opacity: 0;
+    animation: fadeIn 0.3s ease forwards
 }
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.already-answered{
+    pointer-events: none;
+}
+
 .next-question-btn{
     margin-left: 12px;
     margin-bottom: 25px;
