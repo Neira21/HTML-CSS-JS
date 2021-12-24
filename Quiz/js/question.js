@@ -7,17 +7,20 @@ const quiz = [
     {
         q:'¿Cómo se llama el perro de Will Smith en la pelicula "Soy Leyenda"',
         options:['Hooch', 'Pongo', 'Sam', 'Sheldon'],
-        answer: 2
+        answer: 2,
+        img:'../img/c++.png'
     },
     {
         q:'¿Cómo se llama el asesino original de la saga "Chucky"?',
         options:['Charles Lee Ray', 'Charles Ray Johnson', 'Charles Lee Johnson'],
-        answer: 0
+        answer: 0,
+        img:'../img/homero.jpg'
     },
     {
         q:'¿Que papel interpreta Bruce Campbell en la pelicula Spiderman 2?',
         options:['Acomodador', 'Maitre', 'Comentarista'],
-        answer: 0
+        answer: 0,
+        img:'../img/kirby.jpg'
     },
     {
         q:'¿A que año del pasado viaja Marty en la primera pelicula de "Regreso al Futuro"?',
