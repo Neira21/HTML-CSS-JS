@@ -1,8 +1,6 @@
 /* ------------------------------------------------------------------ 
     Tabla de contenido*/
 /* 01 =Google fonts */
-
-
 /* 02 =variables */
 :root{
     --orange: hsl(36, 80%, 50%);
@@ -25,9 +23,7 @@
 
 /* 03 =overrides variables for - theme dark */
 
-
 /* 04 =base */
-
 body{
     background-color: #CECADD;
     font-family: Arial, Helvetica, sans-serif;
@@ -63,10 +59,14 @@ h1,h2,h3,h4,h5,h6{
 }
 
 /* 05 =box */
-
+.box{
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+    padding: 30px;
+}
 
 /* 06 =customized boostrap classes */
-
 .container{
     --bs-gutter-x: 15px;
     max-width: 1140px;
@@ -75,15 +75,32 @@ h1,h2,h3,h4,h5,h6{
     --bs-gutter-x: 30px;
 }
 
-
 /* 07 =animation keyframes */
-
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
 
 /* 08 =section - padding - title */
+.section-padding{
+    padding: 30px 0;
+}
+.section-title .title{
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.section-title .sub-title{
+    font-size: 35
+    px;
+    font-weight: 700;
+}
 
 
 /* 09 =buttons */
-
 .btn-theme{
     background-color: cornflowerblue;
     font-size: 16px;
@@ -247,11 +264,140 @@ h1,h2,h3,h4,h5,h6{
 /* 22 =fun facts section */
 
 
-/* 23 =courses section */
+.fun-facts-item{
+    padding: 20px;
+    border-radius: 25%;
+    text-align: center;
+}   
+.fun-facts-item h2{
+    font-size: 35px;
+    font-weight: 500;
+}
+.fun-facts-item p{
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 450;
+}
+.fun-facts-item .style1{
+    color: var(--black-70);
+}
+.fun-facts-item .style2{
+    color: var(--green-light);
+}
+.fun-facts-item .style3{
+    color: var(--red-light);
+}
+.fun-facts-item .style4{
+    color: var(--orange-light);
+}
 
+/* 23 =courses section */
+.courses-section{
+    margin-top: 20px;
+}
+
+.courses-item{
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.courses-item .img-box img{
+    width: 100%;
+    border-radius: 5px;
+}
+.courses-item .link{
+    color: var(--black-70);
+    display: inline-block;
+}
+.courses-item .title{
+    font-size: 15px;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+.courses-item .instructor{
+    text-transform: capitalize;
+    margin: 0 50px 20px 0;
+}
+.courses-item .rating{
+    font-size: 14px;
+    
+}
+.courses-item .average-rating{
+    font-weight: 600;
+    color: var(--orange);
+}
+.courses-item .average-stars i{
+    color: var(--orange);
+}
+.courses-item .price{
+    padding: 4px 8px;
+    position: absolute;
+    background-color: var(--main-color);
+}
+.margin-top{
+    margin-top: 30px;
+}
+    
+.courses-item:hover .title{
+    color: var(--main-color);
+}
+.courses-item .instructor img{
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
 
 /* 24 =testimonial section */
 
+.testimonials-section .img-box{
+    height: 150px;
+    width: 150px;
+    background-color: var(--red-light);
+    margin: 30px auto 50px;
+}
+
+.testimonials-section .img-box::before,
+.testimonials-section .img-box::after{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid var(--red-light);
+    animation: spin 15s linear;
+}
+
+.testimonials-section .img-box::before{
+    height: 180px;
+    width: 180px;
+    left: -15px;
+    top: -15px;
+    border-left: 1px solid transparent;
+}
+.testimonials-section .img-box::after{
+    height: 210px;
+    width: 210px;
+    left: -30px;
+    top: -30px;
+    border-right: 1px solid transparent;
+}
+.testimonials-section .carousel-control-prev,
+.testimonials-section .carousel-control-next{
+    position: relative;
+    height: 35px;
+    width: 35px;
+    background-color: var(--main-color);
+    display: inline-block;
+    margin: 4px 8px;
+    border-radius: 50%;
+}
+
+.testimonials-item h3{
+    text-transform: capitalize;
+}
+.testimonials-item .text-2{
+    margin: 0;
+    text-transform: capitalize;
+}
 
 /* 25 =bai section */
 
