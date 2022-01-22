@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body{
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+ul{
+    list-style: none;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.princing{
+    min-height: 100vh;
+    background-color: #2e2b2b;
+    padding: 100px 0;
+    --color-1:#5b58e8;
+    --color-2:#ffc600;
+    --color-3:#fc3c7f;
+    --color-4:#3fb7ef;
+}
+.princing .princing-table{
+    background-color: #ffffff;
+    width: calc((100% /3) - 30px);
+    margin: 0 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.princing .princing-table-header{
+    padding: 15px 30px;
+}
+.princing .style-1 .princing-table-footer a,
+.princing .style-1 .princing-table-header{
+    background-color: var(--color-1);
+}
+.princing .style-2 .princing-table-footer a,
+.princing .style-2 .princing-table-header{
+    background-color: var(--color-2);
+}
+.princing .style-3 .princing-table-footer a,
+.princing .style-3 .princing-table-header{
+    background-color: var(--color-3);
+}
+.princing .princing-table-header h3{
+    font-size: 30px;
+    color: #ffffff;
+    text-transform: capitalize;
+    font-weight: 600;
+    text-align: center;
+}
+.princing .princing-table-price{
+    padding: 40px 0;
+}
+.princing .monthly-price{
+    display: flex;
+    padding: 0 30px;
+    justify-content: center;
+}
+.princing .monthly-price .currency{
+    font-size: 25px;
+    color: #555555;
+    font-weight: 700;
+    
+       
+}
+.princing .monthly-price .amount{
+    font-size: 85px;
+    color: #555555;
+    font-weight: 700;
+    line-height: 0.8;
+    
+}
+.princing .princing-table-body{
+    padding: 0 30px;
+}
+.princing .princing-table-body ul li{
+    font-weight: 300;
+    color: #777777;
+    margin-bottom: 15px;
+}
+.princing .princing-table-body ul li:last-child{
+    margin-bottom: 0;
+}
+
+.princing .princing-table-footer{
+    padding: 30px;
+    text-align: center;   
+}
+.princing .princing-table-footer a{
+    display: inline-block;
+    padding: 12px 35px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+.princing .princing-table-footer a:hover{
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}

@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/css-sliderImagenes.css">
     <link rel="stylesheet" type="text/css" href="css/css-imagenes.css">
+    <link rel="stylesheet" type="text/css" href="css/css-direction-aware.css"> 
 </head>
 <!-- <style>
     .newClass{
@@ -115,6 +116,43 @@
             </div>
         </div>
     </div>
+    <section class="grid-box">
+        <div class="container1">
+            <div class="content">
+                <div class="caja">
+                    <div class="inner">
+                        <h1>HTML</h1>
+                    </div>
+                </div>
+                <div class="caja">
+                    <div class="inner">
+                        <h1>Css</h1>
+                    </div>
+                </div>
+                <div class="caja">
+                    <div class="inner">
+                        <h1>Javascript</h1>
+                    </div>
+                </div>
+                <div class="caja">
+                    <div class="inner">
+                        <h1>Jquery</h1>
+                    </div>
+                </div>
+                <div class="caja">
+                    <div class="inner">
+                        <h1>Booststrap</h1>
+                        <h1>4</h1>
+                    </div>
+                </div>
+                <div class="caja">
+                    <div class="inner">
+                        <h1>Reactjs</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script>
         const thumbs=document.querySelector(".thumb-img").children;
@@ -127,6 +165,35 @@
             }
             event.classList.add("active");
         }
+    </script>
+    <script>
+        const allbox=document.querySelector(".content").children;
+        const boxWidth=allbox[0].querySelector(".inner").offsetWidth;
+        const boxHeight=allbox[0].querySelector(".inner").offsetHeight;
+        const div = document.createElement("div");
+              div.style.position="absolute";
+              div.style.width=boxWidth + "px";
+              div.style.height=boxHeight + "px";
+              div.style.backgroundColor="#E91E63";
+              div.style.transition="all 1s ease";
+              div.style.zIndex="1"
+              div.style.left=allbox[0].querySelector(".inner").offsetLeft +"px";
+              div.style.top=allbox[0].querySelector(".inner").offsetTop +"px";
+              document.querySelector(".grid-box").appendChild(div)
+
+              for(let i=0;i<allbox.length;i++){
+                  allbox[i].querySelector(".inner").addEventListener("mouseover", function(){
+                    const height = this.offsetHeight;
+                    const width = this.offsetWidth;  
+                    const x = this.offsetLeft;
+                    const y = this.offsetTop;
+                    div.style.left=x+ "px";
+                    div.style.top=y+ "px";
+                    div.style.width=width+ "px";
+                    div.style.height=height+ "px";
+                  })
+              }
+        
     </script>
 
     <script src="js/javascript.js"></script>
