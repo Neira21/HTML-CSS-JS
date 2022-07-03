@@ -9,8 +9,9 @@ body{
     margin:0;
     padding: 0;
     outline: none;
-    box-sizing: border-box; /*Por defecto, css usa border-content que ignora el 
-    padding y el border para el tamaño exacta del div}*/ 
+    box-sizing: border-box; /* Border-box o Content-box /*
+    Por defecto se utiliza Content-box
+    */
 }
 
 .hide{
@@ -23,7 +24,7 @@ body{
     background-color: #356BF6;
     max-width: 700px;
     color: white;
-    margin: 50px auto;
+    margin: 100px auto;
     padding: 30px;
     border-radius: 10px;
 }
@@ -38,6 +39,8 @@ body{
     margin-bottom: 15px;
     line-height: 26px;
 }
+
+
 /* Por defecto los div tienen la propiedad display:block y estará uno debajo del otro
    display:inline significa que los div se alinien en horizontal y también solo respetaran el 
    alto y ancho del contenido
@@ -53,6 +56,7 @@ body{
     border-radius: 15px;
     cursor: pointer;
 }
+
 
 /*Segunda pantalla*/
 .question-number{

@@ -5,31 +5,31 @@
 
 const quiz = [
     {
-        q:'¿Cómo se llama el perro de Will Smith en la pelicula "Soy Leyenda"',
-        options:['Hooch', 'Pongo', 'Sam', 'Sheldon'],
+        q:'Seleccione al cual pertenece la siguiente sentencia: cout << "Hola Mundo"',
+        options:['Python', 'C#', 'C++', 'Java'],
         answer: 2,
         img:'../img/c++.png'
     },
     {
-        q:'¿Cómo se llama el asesino original de la saga "Chucky"?',
-        options:['Charles Lee Ray', 'Charles Ray Johnson', 'Charles Lee Johnson'],
-        answer: 0,
+        q:'¿Cómo se llama este personaje?',
+        options:['Peter', 'Homero', 'Randy'],
+        answer: 1,
         img:'../img/homero.jpg'
     },
     {
-        q:'¿Que papel interpreta Bruce Campbell en la pelicula Spiderman 2?',
-        options:['Acomodador', 'Maitre', 'Comentarista'],
+        q:'¿Quien es este personaje?',
+        options:['Kirby', 'Sans', 'Sonic'],
         answer: 0,
         img:'../img/kirby.jpg'
     },
     {
-        q:'¿A que año del pasado viaja Marty en la primera pelicula de "Regreso al Futuro"?',
-        options:['2005', '1975', '1985', '1955'],
+        q:'¿Cuál de estos pokemon es de tipo fantasma/veneno?',
+        options:['Arbok', 'Dusklops', 'Seviper', 'Gengar'],
         answer: 3
     },
     {
-        q:'¿Que pelicula de la saga "Destino Final" comienza en una carrera de autos?',
-        options:['La Tercera', 'La Cuarta', 'La Quinta'],
+        q:'Si 2 es 1, ¿Cuánto es 2 + 2?',
+        options:['0', '1', '2'],
         answer: 1
     },
 ]

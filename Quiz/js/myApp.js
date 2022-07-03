@@ -1,10 +1,12 @@
 //En variables capturamos los siguientes campos, número de pregunta, texto 
 //de la pregunta y las opciones
 
+//Elementos de la vista de preguntas
 const questionNumber = document.querySelector(".question-number");
 const questionText = document.querySelector(".question-text");
 const optionContainer = document.querySelector(".option-container");
 
+//Vistas
 const homeBox = document.querySelector(".home-box")
 const questionBox = document.querySelector(".question-box")
 const resultBox = document.querySelector(".result-box")
