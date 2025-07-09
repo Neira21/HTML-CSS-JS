@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App The Movie Database</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <div id="header" class="header-container">
+      <img id="back-button" class="left-arrow-img hide" src="./img/flechaAtras.png" alt="">
+      <h1 class="title">
+        
+        APP The Movie Database
+      </h1>
+    </div>
+
+    <section id="search" class="search-movie">
+        <form id="searchForm" class="header-searchForm">
+          <input type="text" placeholder="Vengadores" />
+          <button id="search-btn">🔍</button>
+        </form>
+    </section>
+
+    
+    <section id="trending-movies" class="trending-container">
+      <div class="trendingPreview-title-container">
+          <h2 class="trendingPreview-title">Películas en Tendencia</h2>
+          <button id="seeAllMovies" class="trendingPreview-btn">Ver todos</button>
+      </div>
+      <div id="trending-container-movies" class="trending-movieList">
+        <div class="movie-container movie-container--loading">Cargando</div>
+        <div class="movie-container movie-container--loading">Cargando</div>
+        <div class="movie-container movie-container--loading">Cargando</div>
+          <!-- <div class="movie-container">
+              <img
+              src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+              class="movie-img"
+              alt="Nombre de la película"
+              />
+          </div> -->
+      </div>
+    </section>
+
+    <section id="trending-tvs" class="trending-container">  
+      <div class="trendingPreview-title-container">
+        <h2 class="trendingPreview-title">Programas TV en tendencia</h2>
+        <button id="seeAllTvs" class="trendingPreview-btn">Ver todos</button>
+      </div>
+      <div id="trending-container-tvs" class="trending-tvList">
+        <!-- <div class="movie-container">
+            <img
+            src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+            class="movie-img"
+            alt="Nombre de la película"
+            />
+        </div> -->
+      </div>
+    </section>
+    
+    <section id="categories" class="categories-container" >
+        <h2 class="categoriesPreview-title">Películas Categorías</h2>
+
+        <article id="categories-list-container" class="categories-list-container">
+            <!-- <div class="category-container">
+                <h3 id="id28" class="category-title">Romance</h3>
+            </div> -->
+        </article>
+    </section>
+
+    <div id="movies">
+      <h2 id="tituloMovieCategory"></h2> 
+      <section id="listMoviesOrTvs" class="list-container-movie-category">
+        
+        <!-- <div class="movie-container">
+          <img
+            src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+            class="movie-img"
+            alt="Nombre de la película"
+          />
+        </div> -->
+    
+      </section>
+    </div>
+    
+
+    <!-- <div id="tvs">
+      <h2 id="tituloTvCategory">Acción</h2> 
+      <section id="listTv" class="list-container-tv-category">
+        
+        <div class="tv-container">
+          <img
+            src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+            class="tv-img"
+            alt="Nombre de la película"
+          />
+        </div>
+    
+      </section>
+    </div> -->
+
+
+
+    <section id="detail" class="detail-container hide">
+      <div class="detail-header">
+        <h1 id="movieDetail-title" class="movieDetail-title">Avengers</h1>  
+      </div>
+      
+      <div class="description-movie">
+        <div class="image-and-details">
+          
+          <img
+          id="movieDetail-img"
+          class="movie-img"
+          alt="Nombre"
+          />            
+          <table class="numbers-movie">
+            <tr>
+              <td><p>Estado de la Película/Serie: </p> </td>
+              <td><span id="movieDetail-score">8.4</span></td>
+            </tr>
+            <tr>
+              <td><p>Fecha de estreno: </p></td>
+              <td><span id="release-date">2022-08-02</span> </td>
+            </tr>
+            <tr>
+              <td><p>Popularidad:</p> </td>
+              <td><span id="popularity">4477.547</span></td>
+            </tr>
+            <tr>
+              <td><p>Voto Promedio </p></td>
+              <td><span id="vote-average">8.226</span></td>
+            </tr>
+            <tr>
+              <td><p>Total de votaciones </p> </td>
+              <td><span id="vote-count">1790</span></td>
+            </tr>
+          </table>
+        </div>
+
+        <div id = "moviedescription" class="moviedescription">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil ea nesciunt minus totam reiciendis excepturi, magnam facere qui nam soluta accusantium autem. Repellendus iusto nobis sequi harum, veritatis sit placeat.
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta ullam incidunt culpa in voluptatum dolores consectetur rerum debitis, quisquam blanditiis sequi id aliquam impedit modi. Molestiae sapiente eligendi quaerat voluptate?
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum necessitatibus unde consequuntur reprehenderit dignissimos voluptatibus vel aspernatur vitae nostrum dolore ratione fuga quia optio quis nesciunt, similique delectus modi veritatis?
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, voluptatem non deserunt in laudantium id sit iste eaque hic nihil, et maxime. Nam in fugiat eius, a dolorum accusamus quasi.
+        </div>
+      </div>
+      
+      
+  
+      <article id="categories-of-the-movie-container" class="categories-of-the-movie-container">
+        <!-- <div class="category-container">
+          <h3 id="id28" class="category-title">Accion</h3>
+        </div>
+  
+        <div class="category-container">
+          <h3 id="id16" class="category-title">Suspenso</h3>
+        </div>
+  
+        <div class="category-container">
+          <h3 id="id14" class="category-title">Terror</h3>
+        </div> -->
+      </article>
+  
+      <article class="relatedMovies-container">
+        <h2 class="relatedMovies-title">Películas similares</h2>
+  
+        <div id="MoviesOrTvSimilars" class="relatedMovies-scrollContainer">
+          
+          <!-- <div class="movie-container">
+            <img
+              src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+              class="movie-img"
+              alt="Nombre de la película"
+            />
+          </div>
+          
+          <div class="movie-container">
+            <img
+              src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+              class="movie-img"
+              alt="Nombre de la película"
+            />
+          </div>
+          
+          <div class="movie-container">
+            <img
+              src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+              class="movie-img"
+              alt="Nombre de la película"
+            />
+          </div>
+          <div class="movie-container">
+            <img
+              src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+              class="movie-img"
+              alt="Nombre de la película"
+            />
+          </div>
+          <div class="movie-container">
+            <img
+              src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+              class="movie-img"
+              alt="Nombre de la película"
+            />
+          </div> -->
+        </div>
+      </article>
+    </section>
+
+    <footer>Hecho por Alvaro Neira Riveros</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./src/nodos.js"></script>
+    <script src="./src/secrets.js"></script>
+    <script src="./src/main.js"></script>
+    <script src="./src/navigation.js"></script>
+</body>
+</html>
