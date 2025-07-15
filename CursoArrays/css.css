@@ -1,0 +1,22 @@
+.contenedor{
+    color: white;
+}
+body{
+    background-color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.content{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #252525;
+    border-radius: 5px;
+    border:blue 1px solid;
+    padding: 10px;
+}
+
+.content > div{
+    border: black 3px solid;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white
+}

@@ -1,0 +1,31 @@
+.grid-box{
+    position: absolute;
+    font-family: sans-serif;
+    top: 2050px;
+    height: 100vh;
+    width: 100%;
+    float: left;
+    background-color: #272727;
+    padding: 110px 0px;
+}
+.container1{
+    max-width: 1170px;
+    margin: auto;
+}
+.grid-box .content .caja{
+    width: 33.33%;
+    float: left;
+    padding: 15px;
+}
+.grid-box .content .caja .inner{
+    background-color: #404040;
+    padding: 90px 15px;
+}
+.grid-box .content .caja .inner h1{
+    font-size: 40px;
+    text-align: center;
+    margin: 0;
+    color: white;
+    position: relative;
+    z-index: 10;
+}

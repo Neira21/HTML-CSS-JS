@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicando Javascript</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/css-sliderImagenes.css">
+    <link rel="stylesheet" type="text/css" href="css/css-imagenes.css">
+    <link rel="stylesheet" type="text/css" href="css/css-direction-aware.css"> 
+</head>
+<style>
+    /* .newClass{
+        color:red;
+        font-size: 50px;
+    }
+    .button{
+        position: absolute;
+        top: 100px;
+    }
+    .select{
+        position: absolute;
+        top: 150px;
+    }
+    body{
+        transition: all 1.5s ease;
+    }
+    .slider{
+        position: absolute;
+        top: 200px;
+    } */
+</style>
+<body>
+
+    <!-- cambiar estilo -->
+    <h1 id="text">Javascript is easy</h1>
+    <button class="button" onclick="toggleClass()">Click</button>
+    <br><br><br>
+
+    <!-- cambiar color de background mediante un select -->
+    <select onchange="color(this.value)" class="select">
+        <option value="">Color</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+        <option value="red">Red</option>
+        <option value="pink">Pink</option>
+        <option value="black">Black</option>
+    </select>
+
+    <!-- slider -->
+    <div class="slider">
+        <div class="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+        </div>
+        <!-- controls slides -->
+        <div class="controls">
+        </div>
+    </div>
+    <!-- slider de imageenes -->
+    <div class="fondo">
+        <div class="sliderimg">
+            <div class="slider-elementos">
+                <div class="elemento active">
+                    <img src="img/slide1.jpg" alt="slide1">
+                    <div class="caption">
+                        Slide1
+                    </div>
+                </div>
+                <div class="elemento">
+                    <img src="img/slide2.jpg" alt="slide2">
+                    <div class="caption">
+                        Slide2
+                    </div>
+                </div>
+                <div class="elemento">
+                    <img src="img/slide3.jpg" alt="slide3">
+                    <div class="caption">
+                        Slide3
+                    </div>
+                </div>
+            </div>
+            <!-- slider controls -->
+                <div class="left-slide">
+                    <p><</p>
+                </div>
+                <div class="right-slide">
+                    <p>></p>
+                </div>
+            <!-- slider controls -->
+        </div>
+    </div>
+
+    <div class="product">
+        <div class="main-img">
+            <img src="img/headphone_blue.png" class="pro-img" alt="product">
+        </div>
+        <div class="thumb-img">
+            <div class="box active" onclick="changeImage(this)">
+                <img src="img/headphone_blue.png" alt="thumb">
+            </div>
+            <div class="box" onclick="changeImage(this)">
+                <img src="img/headphone_pink.png" alt="thumb">     
+            </div>
+            <div class="box" onclick="changeImage(this)">
+                <img src="img/headphone_red.png" alt="thumb">    
+            </div>
+        </div>
+    </div>
+    <section class="grid-box">
+        <div class="container1">
+            <div class="content">
+                <div class="caja">
+                    <div class="inner">
+                        <h1>HTML</h1>
+                    </div>
+                </div>
+                <div class="caja">
+                    <div class="inner">
+                        <h1>Css</h1>
+                    </div>
+                </div>
+                <div class="caja">
+                    <div class="inner">
+                        <h1>Javascript</h1>
+                    </div>
+                </div>
+                <div class="caja">
+                    <div class="inner">
+                        <h1>Jquery</h1>
+                    </div>
+                </div>
+                <div class="caja">
+                    <div class="inner">
+                        <h1>Booststrap</h1>
+                        <h1>4</h1>
+                    </div>
+                </div>
+                <div class="caja">
+                    <div class="inner">
+                        <h1>Reactjs</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const thumbs=document.querySelector(".thumb-img").children;
+
+        function changeImage(event){
+            document.querySelector(".pro-img").src=event.children[0].src
+
+            for(let i=0;i<thumbs.length;i++){
+                thumbs[i].classList.remove("active");
+            }
+            event.classList.add("active");
+        }
+    </script>
+    <script>
+        const allbox=document.querySelector(".content").children;
+        const boxWidth=allbox[0].querySelector(".inner").offsetWidth;
+        const boxHeight=allbox[0].querySelector(".inner").offsetHeight;
+        const div = document.createElement("div");
+              div.style.position="absolute";
+              div.style.width=boxWidth + "px";
+              div.style.height=boxHeight + "px";
+              div.style.backgroundColor="#E91E63";
+              div.style.transition="all 1s ease";
+              div.style.zIndex="1"
+              div.style.left=allbox[0].querySelector(".inner").offsetLeft +"px";
+              div.style.top=allbox[0].querySelector(".inner").offsetTop +"px";
+              document.querySelector(".grid-box").appendChild(div)
+
+              for(let i=0;i<allbox.length;i++){
+                  allbox[i].querySelector(".inner").addEventListener("mouseover", function(){
+                    const height = this.offsetHeight;
+                    const width = this.offsetWidth;  
+                    const x = this.offsetLeft;
+                    const y = this.offsetTop;
+                    div.style.left=x+ "px";
+                    div.style.top=y+ "px";
+                    div.style.width=width+ "px";
+                    div.style.height=height+ "px";
+                  })
+              }
+        
+    </script>
+
+    <script src="js/javascript.js"></script>
+    <script src="js/js-sliderImagenes.js"></script>
+</body>
+</html>

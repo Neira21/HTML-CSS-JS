@@ -1,0 +1,19 @@
+{
+  "name": "appmovie-tmdb",
+  "version": "1.0.0",
+  "description": "Aplicación AppMovie Javascript/Consumo de API",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Neira21/AppMovie-TMDB.git"
+  },
+  "author": "@alvaroneira98",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Neira21/AppMovie-TMDB/issues"
+  },
+  "homepage": "https://github.com/Neira21/AppMovie-TMDB#readme"
+}
