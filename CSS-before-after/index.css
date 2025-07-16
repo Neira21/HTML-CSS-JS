@@ -1,4 +1,15 @@
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  padding: 20px;
+}
+
+
 /* --------- Subrayado gradiente ----------- */
 
 .titulo{
@@ -28,15 +39,16 @@
 
 nav {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  
   background: linear-gradient(to right, #2abfff, #0071ff);
   padding: 10px;
 }
 
 nav ul {
-  display: flex;
   list-style: none;
+  display: flex;
+  justify-content: end;
   padding: 0;
   margin: 0;
 }
@@ -57,8 +69,8 @@ nav ul li::after {
   height: 1px;
   background-color: white;
   left: 0;
-  bottom: 0;
-  transition: width 0.3s ease;
+  bottom: -2px;
+  transition: 0.3s ease;
 }
 
 nav ul li:hover::after {
@@ -77,6 +89,29 @@ nav ul li.active {
 }
 
 
+
+
+/* --------- Imágenes ----------- */
+
+.container-img {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.container-img img {
+  
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1 ;
+  object-fit: cover;
+  
+  
+}
+/* .container-img img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+} */
 
 
 /* --------- Lista OL ----------- */

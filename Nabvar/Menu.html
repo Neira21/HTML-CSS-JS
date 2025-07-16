@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nabvart</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <!--Navbar vertical-->
+      <ul class="sidebar">
+        <li onclick="sidebar()" ><a href="#"><i class="fa-solid fa-x"></i></a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Forum</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+      <!--Navbar horizontal-->
+      <ul class="navbar">
+        <li><a href="#">Alvaro Neira Riveros</a></li>
+        <li class="hideonmobile"><a href="#">Blog</a></li>
+        <li class="hideonmobile"><a href="#">Products</a></li>
+        <li class="hideonmobile" ><a href="#">About</a></li>
+        <li class="hideonmobile"><a href="#">Forum</a></li>
+        <li class="hideonmobile"><a href="#">Login</a></li>
+        <li onclick="sidebar()" class="hamburguer" ><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+      </ul>
+    </nav>
+
+
+    <script>
+      function sidebar(){
+        const sidebar = document.querySelector('.sidebar');
+        if(sidebar.style.display === 'block') {
+          sidebar.style.display = 'none';
+        } else {
+          sidebar.style.display = 'block';
+        }
+      }
+    </script>
+
+  </body>
+</html>

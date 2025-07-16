@@ -1,0 +1,101 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product {
+  width: 240px;
+  height: 380px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Flip */
+.product:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* --- CARAS --- */
+.front-product,
+.back-product {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box; /* 🔑 asegura que padding no altere el tamaño */
+}
+
+/* --- FRONT --- */
+.front-product {
+  background: linear-gradient(145deg, #e4ffe9, #c8f6d6);
+  border: 1px solid #d1d5db;
+  transform: rotateY(0deg);
+}
+
+.front-product img {
+  width: 100%;
+  height: 240px;
+  object-fit: contain;
+  border-radius: 12px;
+  background-color: white;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.product-info h2 {
+  font-size: 16px;
+  margin: 0;
+  color: #222;
+  line-height: 1.3;
+}
+
+.product-info p {
+  font-weight: bold;
+  color: #2f855a;
+  margin: 0;
+}
+
+/* --- BACK --- */
+.back-product {
+  background: linear-gradient(145deg, #f0f4f8, #dfe7ed);
+  border: 1px solid #d1d5db;
+  transform: rotateY(180deg);
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.back-product p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.back-product button {
+  background-color: #48bb78;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
