@@ -34,27 +34,39 @@ body {
 /* -------- LOGO -------- */
 
 .logo-container {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-}
-
-.logo-container-small{
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.top .logo-container img {
+
+.logo-container img {
+  width: 50px;
+  transition: width 0.3s ease;
+}
+
+.sidebar.expanded .logo-container img {
+  width: 100px;
   margin-bottom: 20px;
 }
 
-.top .brand {
+.top .brand{
+  display: none;
+}
+
+.top .subtitle {
+  display: none;
+}
+
+.expanded .top .brand {
+  display: flex;
   font-size: 1.1rem;
   font-weight: bold;
 }
 
-.top .subtitle {
+.expanded .top .subtitle {
+  display: flex;
   font-size: 0.8rem;
   color: #aaa;
 }
@@ -63,9 +75,7 @@ body {
   display: flex;
 }
 
-.expanded .top .logo-container-small{
-  display: none;
-}
+
 
 
 /* -------- SIDEBAR -------- */
@@ -80,6 +90,7 @@ body {
   top: 0;
   bottom: 0;
   left: 0;
+  z-index: 100;
 }
 
 .sidebar.expanded {
@@ -163,18 +174,21 @@ main {
   margin-left: 70px;
   padding: 20px;
   transition: margin-left 0.3s ease;
-  width: 100%;
+  
+  position: relative;
+  z-index: 1;
+  
 }
 
 .sidebar.expanded ~ main {
-  margin-left: 380px;
+  margin-left: 370px;
+  
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .sidebar {
-    position: absolute;
-    height: 100vh;
+    
   }
 
   .sidebar.expanded {
@@ -185,7 +199,7 @@ main {
     justify-content: flex-start;
   }
 
-  .sidebar.expanded ~ main {
+   .sidebar.expanded ~ main {
     margin-left: 0;
   }
 }
